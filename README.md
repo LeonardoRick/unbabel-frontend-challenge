@@ -8,15 +8,18 @@ Since there was no information about the design on mobile, I did just the basic 
 
 There's an invisible button 'About' at the side of the upload icon, to show the router working properly.
 
+During the usage of `vitest` I found this bug that already have an issue opened on github: <https://github.com/vitest-dev/vitest/issues/2393>. We should update the vitest version when its closed, since now we're using 0.24.3 to ensure it works on restart
+
 ## credits
 
-- <https://vuejs.org/guide/introduction.html>
 - <https://pinia.vuejs.org/introduction.html#basic-example>
 - <https://www.w3schools.com/jsref/jsref_valueof_date.asp>
 - <https://stackoverflow.com/questions/65997180/automatic-resizing-of-textarea-after-loading-data-in-vue>
+- <https://vuejs.org/api/composition-api-lifecycle.html>
 
 - <https://vuejs.org/guide/scaling-up/testing.html#recipes>
 - <https://vitest.dev/guide/migration.html#migrating-from-jest>
+- <https://vitest.dev/guide/coverage.html#coverage-setup>
 - <https://stackoverflow.com/a/72149404/10526869>
 
 # Frontend Challenge (Original README and implementation requirements)

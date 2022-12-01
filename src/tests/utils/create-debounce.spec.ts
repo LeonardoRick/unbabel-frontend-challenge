@@ -1,6 +1,6 @@
-import createDebounce from './create-debounce';
+import createDebounce from '../../utils/create-debounce';
 
-it('should work', () =>
+it('should debounce any function when calling it with debounce() wrapper', () =>
     new Promise(done => {
         const debounce = createDebounce();
         let x = 1;
