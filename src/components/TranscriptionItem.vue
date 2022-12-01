@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { createDebounce } from '@/utils/create-debounce';
+import createDebounce from '@/utils/create-debounce';
+import resizeTextarea from '@/utils/resize-textarea';
 
 import type { TranscriptionModel } from '@/interfaces/transcriptions.model';
 
@@ -9,7 +10,6 @@ interface EmitsModel {
     (eventName: 'item-changed', item: TranscriptionModel): void;
 }
 
-let mounted = ref(false);
 const debounce = createDebounce();
 const { item } = defineProps<{ item: TranscriptionModel }>();
 const voice = ref(item.voice);
@@ -18,18 +18,12 @@ const textareaRef = ref<HTMLTextAreaElement>();
 
 const emit$ = defineEmits<EmitsModel>();
 
-const emitItemChanged = () => {
-    debounce(() => emit$('item-changed', { id: item.id, voice: voice.value, text: text.value }));
-};
-const resizeTextArea = () => {
-    const textarea = textareaRef.value;
-    if (textarea && Number(textarea.style.height.replace('px', '')) < textarea.scrollHeight) {
-        textarea.style.height = `${textarea.scrollHeight + (mounted.value ? 0 : 10)}px`;
-        mounted.value = true;
-    }
-};
-onMounted(() => resizeTextArea());
+const emitItemChanged = () => debounce(() => emit$('item-changed', { id: item.id, voice: voice.value, text: text.value }));
+const _resizeTextarea = (threshold = 0) => resizeTextarea(textareaRef, threshold);
+
+onMounted(() => _resizeTextarea(10));
 </script>
+
 <template>
     <li>
         <input type="checkbox" class="item-checkbox" />
@@ -40,14 +34,15 @@ onMounted(() => resizeTextArea());
                 ref="textareaRef"
                 v-model="text"
                 @input="emitItemChanged"
-                @focus="resizeTextArea"
-                @keyup="resizeTextArea" />
+                @focus="() => _resizeTextarea()"
+                @keyup="() => _resizeTextarea()" />
         </div>
         <button class="reset-button-style delete-button" @click="$emit('delete-clicked')">
             <img src="@/assets/images/delete.svg" alt="delete" />
         </button>
     </li>
 </template>
+
 <style>
 li {
     display: flex;
