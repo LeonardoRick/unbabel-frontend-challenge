@@ -1,11 +1,22 @@
-# Frontend Challenge
+# Frontend Challenge Implementation
+
+## Notes
+
+## credits
+
+- <https://vuejs.org/guide/introduction.html>
+- <https://pinia.vuejs.org/introduction.html#basic-example>
+
+# Frontend Challenge (Original README and implementation requirements)
 
 Our goal is to understand:
+
 - How knowledgeable you are
 - How well you structure your app
 - How well can you visually reproduce a mockup
 
 Some restrictions:
+
 - Use the Vue javascript framework and its Component system
 - Don't use a UI framework like Bootstrap
 
@@ -71,7 +82,7 @@ The data above is enough to complete challenge. We also include the source Sketc
 - You can find [Montserrat on Google Fonts](https://fonts.google.com/specimen/Montserrat)
 - You can find [Open Sans on Google Fonts](https://fonts.google.com/specimen/Open+Sans)
 
-## Bonus points:
+## Bonus points
 
 - Keeping in mind accessibility
 - Adding tests to your components and app

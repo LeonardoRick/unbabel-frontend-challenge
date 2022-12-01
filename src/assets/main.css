@@ -1,0 +1,45 @@
+@import './base.css';
+
+#app {
+    font-weight: normal;
+}
+
+/* checkboxes */
+input[type='checkbox'] {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    min-width: 16px;
+    cursor: pointer;
+    border: 2px solid var(--color-purple);
+    border-radius: 2px;
+}
+
+input[type='checkbox']::before {
+    height: 16px;
+    width: 16px;
+    min-width: 16px;
+    padding: 1px;
+}
+
+input[type='checkbox']:checked::before {
+    border-radius: 2px;
+    content: url('images/check.svg');
+    background-color: var(--color-purple);
+}
+
+/* buttons */
+.reset-button-style {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* resets */
+ul {
+    padding: 0;
+}
