@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
 import { defineStore } from 'pinia';
 import type { TranscriptionModel } from '../interfaces/transcriptions.model.vue';
 
@@ -7,7 +6,7 @@ export type RootState = {
 };
 
 export const useTranscriptionsStore = defineStore({
-    id: 'mainStore',
+    id: 'transcriptionsStore',
 
     state: () =>
         ({
@@ -20,12 +19,19 @@ export const useTranscriptionsStore = defineStore({
         },
 
         addEmptyTranscription() {
-            console.log(uuidv4());
-            this.transcriptions.push({ id: 4, text: '', voice: '' });
+            this.transcriptions.push({ id: new Date().valueOf(), text: '', voice: '' });
         },
 
         deleteTranscription(id: number) {
             this.transcriptions = this.transcriptions.filter(trans => trans.id !== id);
+        },
+
+        updateSingleTranscription(transcription: TranscriptionModel) {
+            const trans = this.transcriptions.find(t => t.id === transcription.id);
+            if (trans) {
+                trans.voice = transcription.voice;
+                trans.text = transcription.text;
+            }
         }
     }
 });

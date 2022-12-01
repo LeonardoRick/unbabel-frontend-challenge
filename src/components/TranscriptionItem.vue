@@ -1,24 +1,47 @@
 <script setup lang="ts">
-import type { TranscriptionModel } from '../interfaces/transcriptions.model.vue';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import { createDebounce } from '@/utils/create-debounce';
 
+import type { TranscriptionModel } from '../interfaces/transcriptions.model.vue';
+
+interface EmitsModel {
+    (eventName: 'delete-clicked'): void;
+    (eventName: 'item-changed', item: TranscriptionModel): void;
+}
+
+let mounted = ref(false);
+const debounce = createDebounce();
 const { item } = defineProps<{ item: TranscriptionModel }>();
 const voice = ref(item.voice);
 const text = ref(item.text);
+const textareaRef = ref<HTMLTextAreaElement>();
 
-defineEmits(['delete-clicked']);
+const emit$ = defineEmits<EmitsModel>();
 
-const todo = () => {
-    console.log(todo);
+const emitItemChanged = () => {
+    debounce(() => emit$('item-changed', { id: item.id, voice: voice.value, text: text.value }));
 };
+const resizeTextArea = () => {
+    const textarea = textareaRef.value;
+    if (textarea && Number(textarea.style.height.replace('px', '')) < textarea.scrollHeight) {
+        textarea.style.height = `${textarea.scrollHeight + (mounted.value ? 0 : 10)}px`;
+        mounted.value = true;
+    }
+};
+onMounted(() => resizeTextArea());
 </script>
 <template>
     <li>
         <input type="checkbox" class="item-checkbox" />
         <img src="@/assets/images/person.svg" alt="" />
         <div class="text-wrapper">
-            <input type="text" v-model="voice" class="voice" />
-            <textarea v-model="text" @input="todo"> </textarea>
+            <input type="text" v-model="voice" class="voice" @input="emitItemChanged" />
+            <textarea
+                ref="textareaRef"
+                v-model="text"
+                @input="emitItemChanged"
+                @focus="resizeTextArea"
+                @keyup="resizeTextArea" />
         </div>
         <button class="reset-button-style delete-button" @click="$emit('delete-clicked')">
             <img src="@/assets/images/delete.svg" alt="delete" />
@@ -55,6 +78,7 @@ li .voice {
     font-weight: 600;
     box-sizing: border-box;
     border-radius: 2px;
+    width: 100%;
 }
 
 li .voice:hover {
@@ -65,16 +89,13 @@ li textarea {
     color: #778195;
     font-family: 'Open Sans', sans-serif;
     border: none;
-    /* height: 200px; */
-    /* min-height: fit-content; */
-    /* white-space:; */
-    /* height: 200px; */
     resize: vertical;
     min-height: fit-content;
     text-overflow: ellipsis;
     background-color: transparent;
     overflow-y: hidden;
     border-radius: 2px;
+    width: 100%;
 }
 
 li textarea:hover {

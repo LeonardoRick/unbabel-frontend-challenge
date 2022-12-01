@@ -2,10 +2,16 @@
 
 ## Notes
 
+Neither the scketch or the description explicit said how the content should be editable (if its always, which fields are required, etc). So I followed an approach that I thought would be a great UX.
+
+Theres a invisible buttton 'About' at the side of the upload icon, to show the router working properly.
+
 ## credits
 
 - <https://vuejs.org/guide/introduction.html>
 - <https://pinia.vuejs.org/introduction.html#basic-example>
+- <https://www.w3schools.com/jsref/jsref_valueof_date.asp>
+- <https://stackoverflow.com/questions/65997180/automatic-resizing-of-textarea-after-loading-data-in-vue>
 
 # Frontend Challenge (Original README and implementation requirements)
 

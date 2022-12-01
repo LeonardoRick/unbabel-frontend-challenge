@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
 import Header from '@/components/Header.vue';
-import { getTranscriptions, postTranscriptions } from './services/api.vue';
 import { useTranscriptionsStore } from './stores/transcription';
-
+import { getTranscriptions, postTranscriptions } from '@/services/api';
 import type { TranscriptionModel } from './interfaces/transcriptions.model.vue';
 
 const transcriptionsStore$ = useTranscriptionsStore();

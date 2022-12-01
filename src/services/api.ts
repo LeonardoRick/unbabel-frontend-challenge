@@ -1,4 +1,3 @@
-<script lang="ts">
 import type { TranscriptionModel } from '@/interfaces/transcriptions.model.vue';
 
 const url = 'http://www.mocky.io/v2/5ae1c5792d00004d009d7e5c';
@@ -13,4 +12,3 @@ export async function postTranscriptions(transcriptions: TranscriptionModel[]) {
         body: JSON.stringify(transcriptions)
     });
 }
-</script>

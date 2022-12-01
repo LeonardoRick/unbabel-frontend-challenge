@@ -1,17 +1,13 @@
 <script setup lang="ts">
 defineEmits(['upload-clicked', 'add-clicked']);
-
-const changeTheme = () => {
-    console.log(window.matchMedia('(prefers-color-scheme: dark)'));
-    console.log('changeTheme');
-};
 </script>
+
 <template>
     <header>
         <div class="inner-container">
             <h1><RouterLink to="/home">Transcriptions</RouterLink></h1>
             <nav>
-                <RouterLink to="/another-page">About</RouterLink>
+                <RouterLink class="about" to="/another-page">About</RouterLink>
                 <button @click="$emit('upload-clicked')" class="reset-button-style">
                     <img src="@/assets/images/upload.svg" alt="upload" />
                 </button>
@@ -31,6 +27,7 @@ header {
 
 header .inner-container {
     display: flex;
+    align-items: center;
     height: 100px;
     padding: 2rem;
     max-width: 1280px;
@@ -39,6 +36,7 @@ header .inner-container {
 
 header h1 {
     flex: 1;
+    display: flex;
 }
 
 header h1 a {
@@ -52,6 +50,19 @@ header h1 a {
 nav {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 12px;
+}
+
+nav .about {
+    opacity: 0;
+}
+nav .about:hover {
+    opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+    nav {
+        gap: 24px;
+    }
 }
 </style>

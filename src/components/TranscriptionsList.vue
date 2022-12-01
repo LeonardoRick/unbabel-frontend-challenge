@@ -3,14 +3,10 @@ import type { TranscriptionModel } from '../interfaces/transcriptions.model.vue'
 import TranscriptionItem from './TranscriptionItem.vue';
 import { useTranscriptionsStore } from '@/stores/transcription';
 
-defineEmits(['delete-clicked']);
-
 const { list } = defineProps<{ list: TranscriptionModel[] }>();
 const transcriptionsStore$ = useTranscriptionsStore();
 
-const addEmptyTranscription = () => {
-    transcriptionsStore$.addEmptyTranscription();
-};
+defineEmits(['delete-clicked']);
 </script>
 
 <template>
@@ -20,9 +16,10 @@ const addEmptyTranscription = () => {
                 v-for="item in list"
                 :key="item.id"
                 :item="item"
-                @delete-clicked="$emit('delete-clicked', item.id)" />
+                @delete-clicked="$emit('delete-clicked', item.id)"
+                @item-changed="transcription => transcriptionsStore$.updateSingleTranscription(transcription)" />
         </ul>
-        <button @click="addEmptyTranscription" class="reset-button-style">
+        <button @click="() => transcriptionsStore$.addEmptyTranscription()" class="reset-button-style">
             <img src="@/assets/images/add-row.svg" alt="add another item" />
         </button>
     </div>
