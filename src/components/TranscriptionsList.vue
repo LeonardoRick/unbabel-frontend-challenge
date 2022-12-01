@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { TranscriptionModel } from '../interfaces/transcriptions.model.vue';
 import TranscriptionItem from './TranscriptionItem.vue';
 import { useTranscriptionsStore } from '@/stores/transcription';
+
+import type { TranscriptionModel } from '@/interfaces/transcriptions.model';
 
 const { list } = defineProps<{ list: TranscriptionModel[] }>();
 const transcriptionsStore$ = useTranscriptionsStore();

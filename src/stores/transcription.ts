@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import type { TranscriptionModel } from '../interfaces/transcriptions.model.vue';
+import type { TranscriptionModel } from '@/interfaces/transcriptions.model';
 
 export type RootState = {
     transcriptions: TranscriptionModel[];

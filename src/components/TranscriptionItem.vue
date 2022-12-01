@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { createDebounce } from '@/utils/create-debounce';
 
-import type { TranscriptionModel } from '../interfaces/transcriptions.model.vue';
+import type { TranscriptionModel } from '@/interfaces/transcriptions.model';
 
 interface EmitsModel {
     (eventName: 'delete-clicked'): void;
@@ -52,7 +52,7 @@ onMounted(() => resizeTextArea());
 li {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 16px;
     background-color: var(--color-background-soft);
     border: 1px solid var(--color-border);
     padding: 24px 16px;
@@ -108,5 +108,11 @@ li .delete-button {
 
 li:hover > .delete-button {
     visibility: visible;
+}
+
+@media screen and (min-width: 1024px) {
+    li {
+        padding: 24px;
+    }
 }
 </style>

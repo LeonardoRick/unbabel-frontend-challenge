@@ -29,7 +29,7 @@ header .inner-container {
     display: flex;
     align-items: center;
     height: 100px;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -40,7 +40,7 @@ header h1 {
 }
 
 header h1 a {
-    color: var(--color-text);
+    color: var(--color-main-title);
     text-decoration: none;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -63,6 +63,10 @@ nav .about:hover {
 @media screen and (min-width: 1024px) {
     nav {
         gap: 24px;
+    }
+
+    header .inner-container {
+        padding: 2rem;
     }
 }
 </style>

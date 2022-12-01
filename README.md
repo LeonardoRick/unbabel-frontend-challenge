@@ -2,9 +2,11 @@
 
 ## Notes
 
-Neither the scketch or the description explicit said how the content should be editable (if its always, which fields are required, etc). So I followed an approach that I thought would be a great UX.
+Neither the sketch nor the description explicitly said how the content should be editable (if it's always, which fields are required, etc). So I followed an approach that I thought would be a great UX;
 
-Theres a invisible buttton 'About' at the side of the upload icon, to show the router working properly.
+Since there was no information about the design on mobile, I did just the basic and standard changes on margins and paddings to make it fit properly on smaller devices;
+
+There's an invisible button 'About' at the side of the upload icon, to show the router working properly.
 
 ## credits
 
