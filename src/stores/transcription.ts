@@ -15,7 +15,7 @@ export const useTranscriptionsStore = defineStore({
 
     actions: {
         init(transcriptions: TranscriptionModel[]) {
-            this.transcriptions = transcriptions;
+            this.transcriptions.push(...transcriptions);
         },
 
         addEmptyTranscription() {

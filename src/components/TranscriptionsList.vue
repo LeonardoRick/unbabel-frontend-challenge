@@ -4,10 +4,13 @@ import { useTranscriptionsStore } from '@/stores/transcription';
 
 import type { TranscriptionModel } from '@/interfaces/transcriptions.model';
 
+interface EmitsModel {
+    (eventName: 'delete-clicked', id: number): void;
+}
+
 const { list } = defineProps<{ list: TranscriptionModel[] }>();
 const transcriptionsStore$ = useTranscriptionsStore();
-
-defineEmits(['delete-clicked']);
+defineEmits<EmitsModel>();
 </script>
 
 <template>
@@ -20,8 +23,8 @@ defineEmits(['delete-clicked']);
                 @delete-clicked="$emit('delete-clicked', item.id)"
                 @item-changed="transcription => transcriptionsStore$.updateSingleTranscription(transcription)" />
         </ul>
-        <button @click="() => transcriptionsStore$.addEmptyTranscription()" class="reset-button-style">
-            <img src="@/assets/images/add-row.svg" alt="add another item" />
+        <button type="button" @click="transcriptionsStore$.addEmptyTranscription" class="reset-button-style">
+            <img src="@/assets/images/add-row.svg" alt="add another transcription" />
         </button>
     </div>
 </template>

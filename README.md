@@ -15,6 +15,10 @@ There's an invisible button 'About' at the side of the upload icon, to show the 
 - <https://www.w3schools.com/jsref/jsref_valueof_date.asp>
 - <https://stackoverflow.com/questions/65997180/automatic-resizing-of-textarea-after-loading-data-in-vue>
 
+- <https://vuejs.org/guide/scaling-up/testing.html#recipes>
+- <https://vitest.dev/guide/migration.html#migrating-from-jest>
+- <https://stackoverflow.com/a/72149404/10526869>
+
 # Frontend Challenge (Original README and implementation requirements)
 
 Our goal is to understand:

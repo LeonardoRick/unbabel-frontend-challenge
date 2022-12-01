@@ -27,7 +27,7 @@ onMounted(() => _resizeTextarea(10));
 <template>
     <li>
         <input type="checkbox" class="item-checkbox" />
-        <img src="@/assets/images/person.svg" alt="" />
+        <img src="@/assets/images/person.svg" alt="user image" />
         <div class="text-wrapper">
             <input type="text" v-model="voice" class="voice" @input="emitItemChanged" />
             <textarea
@@ -37,8 +37,8 @@ onMounted(() => _resizeTextarea(10));
                 @focus="() => _resizeTextarea()"
                 @keyup="() => _resizeTextarea()" />
         </div>
-        <button class="reset-button-style delete-button" @click="$emit('delete-clicked')">
-            <img src="@/assets/images/delete.svg" alt="delete" />
+        <button type="button" class="reset-button-style delete-button" @click="$emit('delete-clicked')">
+            <img src="@/assets/images/delete.svg" alt="delete transcription" />
         </button>
     </li>
 </template>

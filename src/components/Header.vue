@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineEmits(['upload-clicked', 'add-clicked']);
+import apiActions$ from '@/services/api-actions';
 </script>
 
 <template>
@@ -8,16 +8,15 @@ defineEmits(['upload-clicked', 'add-clicked']);
             <h1><RouterLink to="/home">Transcriptions</RouterLink></h1>
             <nav>
                 <RouterLink class="about" to="/another-page">About</RouterLink>
-                <button @click="$emit('upload-clicked')" class="reset-button-style">
-                    <img src="@/assets/images/upload.svg" alt="upload" />
+                <button type="button" @click="apiActions$.next('upload')" class="reset-button-style">
+                    <img src="@/assets/images/upload.svg" alt="upload list of transcriptions" />
                 </button>
-                <button @click="$emit('add-clicked')" class="reset-button-style">
-                    <img src="@/assets/images/fetch-document.svg" alt="fetch document" />
+                <button type="button" @click="apiActions$.next('add')" class="reset-button-style">
+                    <img src="@/assets/images/fetch-document.svg" alt="fetch transcriptions" />
                 </button>
             </nav>
         </div>
     </header>
-    <div class="header"></div>
 </template>
 
 <style>
