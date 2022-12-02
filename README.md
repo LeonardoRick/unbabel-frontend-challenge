@@ -26,6 +26,7 @@ Feedback: It was really fun to dive a little bit into vue and vue3. It's a reall
 - <https://www.w3schools.com/jsref/jsref_valueof_date.asp>
 - <https://stackoverflow.com/questions/65997180/automatic-resizing-of-textarea-after-loading-data-in-vue>
 - <https://vuejs.org/api/composition-api-lifecycle.html>
+- <https://twitter.com/posva/status/1560020538281582592>
 
 - <https://vuejs.org/guide/scaling-up/testing.html#recipes>
 - <https://vitest.dev/guide/migration.html#migrating-from-jest>
