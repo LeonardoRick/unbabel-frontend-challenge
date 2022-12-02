@@ -18,6 +18,8 @@ The program uses `pinia` for state management and `vitest` for unit testing;
 
 During the usage of `vitest` I found this bug that already have an issue opened on github: <https://github.com/vitest-dev/vitest/issues/2393>. We should update the vitest version when its closed, since now we're using 0.24.3 to ensure it works on restart.
 
+Feedback: It was really fun to dive a little bit into vue and vue3. It's a really fast framework combined with vite! The development process is insanely fluid and the project was something nice to code!
+
 ## credits
 
 - <https://pinia.vuejs.org/introduction.html#basic-example>
