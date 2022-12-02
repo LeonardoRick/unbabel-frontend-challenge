@@ -1,5 +1,9 @@
 # Frontend Challenge Implementation
 
+|Light|Dark|
+|----|-----|
+|![Challenge Implemetation Screenshot](_README_assets/unbabel_challenge_implementation.png) |![Challenge Implemetation Dark Mode Screenshot](_README_assets/unbabel_challenge_implementation_dark.png)
+
 ## Notes
 
 Neither the sketch nor the description explicitly said how the content should be editable (if it's always, which fields are required, etc). So I followed an approach that I thought would be a great UX;
