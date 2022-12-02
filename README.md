@@ -10,9 +10,13 @@ Neither the sketch nor the description explicitly said how the content should be
 
 Since there was no information about the design on mobile, I did just the basic and standard changes on margins and paddings to make it fit properly on smaller devices;
 
-There's an invisible button 'About' at the side of the upload icon, to show the router working properly.
+There's an invisible button 'About' at the side of the upload icon, to show the router working properly;
 
-During the usage of `vitest` I found this bug that already have an issue opened on github: <https://github.com/vitest-dev/vitest/issues/2393>. We should update the vitest version when its closed, since now we're using 0.24.3 to ensure it works on restart
+I used the `rxjs` library to manage the header events because it started to get to much verbose to pass this click actions all over the application (since the clicks are on the header and the usage is on a sibling component);
+
+The program uses `pinia` for state management and `vitest` for unit testing;
+
+During the usage of `vitest` I found this bug that already have an issue opened on github: <https://github.com/vitest-dev/vitest/issues/2393>. We should update the vitest version when its closed, since now we're using 0.24.3 to ensure it works on restart.
 
 ## credits
 
