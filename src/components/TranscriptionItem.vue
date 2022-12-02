@@ -85,10 +85,9 @@ li textarea {
     font-family: 'Open Sans', sans-serif;
     border: none;
     resize: vertical;
-    min-height: fit-content;
-    text-overflow: ellipsis;
+    max-height: 300px;
+    overflow-y: auto;
     background-color: transparent;
-    overflow-y: hidden;
     border-radius: 2px;
     width: 100%;
 }
