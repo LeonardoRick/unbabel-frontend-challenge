@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import resizeTextarea from '../../utils/resize-textarea';
+import resizeTextarea from './resize-textarea';
 
 it('should not resize if scrollHeight is undefined', () => {
     resizeTextarea(ref(new HTMLTextAreaElement()));

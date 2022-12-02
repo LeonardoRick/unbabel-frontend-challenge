@@ -1,4 +1,4 @@
-import createDebounce from '../../utils/create-debounce';
+import createDebounce from './create-debounce';
 
 it('should debounce any function when calling it with debounce() wrapper', () =>
     new Promise(done => {
