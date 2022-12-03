@@ -32,6 +32,7 @@ Feedback: It was really fun to dive a little bit into vue and vue3. It's a reall
 - <https://vitest.dev/guide/migration.html#migrating-from-jest>
 - <https://vitest.dev/guide/coverage.html#coverage-setup>
 - <https://stackoverflow.com/a/72149404/10526869>
+- <https://vitest.dev/api/#tomatchsnapshot>
 
 # Frontend Challenge (Original README and implementation requirements)
 

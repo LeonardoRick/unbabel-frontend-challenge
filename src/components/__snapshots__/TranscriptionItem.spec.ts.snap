@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`TranscriptionItem > should mount 1`] = `
+"<li><input type=\\"checkbox\\" class=\\"item-checkbox\\"><img src=\\"/src/assets/images/person.svg\\" alt=\\"user image\\">
+  <div class=\\"text-wrapper\\"><input type=\\"text\\" class=\\"voice\\"><textarea></textarea></div><button type=\\"button\\" class=\\"reset-button-style delete-button\\"><img src=\\"/src/assets/images/delete.svg\\" alt=\\"delete transcription\\"></button>
+</li>"
+`;

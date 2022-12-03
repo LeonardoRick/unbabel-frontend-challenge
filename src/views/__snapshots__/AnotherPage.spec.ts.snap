@@ -1,0 +1,8 @@
+// Vitest Snapshot v1
+
+exports[`AnotherPage > should mount 1`] = `
+"<div class=\\"about\\">
+  <h1>This is another page</h1>
+  <h2>This page is just to show the router working properly</h2>
+</div>"
+`;

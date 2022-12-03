@@ -1,0 +1,14 @@
+// Vitest Snapshot v1
+
+exports[`Header > should mount 1`] = `
+"<header>
+  <div class=\\"inner-container\\">
+    <h1>
+      <routerlink to=\\"/home\\">Transcriptions</routerlink>
+    </h1>
+    <nav>
+      <routerlink class=\\"about\\" to=\\"/another-page\\">About</routerlink><button type=\\"button\\" class=\\"reset-button-style\\"><img src=\\"/src/assets/images/upload.svg\\" alt=\\"upload list of transcriptions\\"></button><button type=\\"button\\" class=\\"reset-button-style\\"><img src=\\"/src/assets/images/fetch-document.svg\\" alt=\\"fetch transcriptions\\"></button>
+    </nav>
+  </div>
+</header>"
+`;

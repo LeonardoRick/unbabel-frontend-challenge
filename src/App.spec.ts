@@ -1,8 +1,12 @@
 import AppVue from '@/App.vue';
 import { mount } from '@vue/test-utils';
 
-test('TranscriptionItem', () => {
+describe('TranscriptionItem', () => {
     it('should mount', () => {
-        expect(mount(AppVue).html()).toMatchSnapshot();
+        const mockRouter = {
+            push: vitest.fn()
+        };
+        AppVue.use;
+        expect(mount(AppVue, { global: { mocks: { $router: mockRouter } } }).html()).toMatchSnapshot();
     });
 });
