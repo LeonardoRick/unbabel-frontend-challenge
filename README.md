@@ -33,6 +33,8 @@ Feedback: It was really fun to dive a little bit into vue and vue3. It's a reall
 - <https://vitest.dev/guide/coverage.html#coverage-setup>
 - <https://stackoverflow.com/a/72149404/10526869>
 - <https://vitest.dev/api/#tomatchsnapshot>
+- <https://www.koderhq.com/tutorial/vue/snapshot-test/>
+- <https://test-utils.vuejs.org/guide/advanced/vue-router.html#using-a-mocked-router>
 
 # Frontend Challenge (Original README and implementation requirements)
 

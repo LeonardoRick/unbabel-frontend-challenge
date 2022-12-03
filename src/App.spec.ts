@@ -1,12 +1,16 @@
 import AppVue from '@/App.vue';
 import { mount } from '@vue/test-utils';
+import { createPinia } from 'pinia';
+import router from '@/router';
 
 describe('TranscriptionItem', () => {
     it('should mount', () => {
-        const mockRouter = {
-            push: vitest.fn()
-        };
-        AppVue.use;
-        expect(mount(AppVue, { global: { mocks: { $router: mockRouter } } }).html()).toMatchSnapshot();
+        expect(
+            mount(AppVue, {
+                global: {
+                    plugins: [createPinia(), router]
+                }
+            }).html()
+        ).toMatchSnapshot();
     });
 });

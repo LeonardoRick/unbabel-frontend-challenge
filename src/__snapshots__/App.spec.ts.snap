@@ -1,10 +1,13 @@
 // Vitest Snapshot v1
 
-exports[`Header > should mount 1`] = `
-"<header>
+exports[`TranscriptionItem > should mount 1`] = `
+"<header data-v-7a7a37b1=\\"\\">
   <div class=\\"inner-container\\">
     <h1><a href=\\"/home\\" class=\\"\\">Transcriptions</a></h1>
     <nav><a href=\\"/another-page\\" class=\\"about\\">About</a><button type=\\"button\\" class=\\"reset-button-style\\"><img src=\\"/src/assets/images/upload.svg\\" alt=\\"upload list of transcriptions\\"></button><button type=\\"button\\" class=\\"reset-button-style\\"><img src=\\"/src/assets/images/fetch-document.svg\\" alt=\\"fetch transcriptions\\"></button></nav>
   </div>
-</header>"
+</header>
+<main data-v-7a7a37b1=\\"\\">
+  <!---->
+</main>"
 `;

@@ -7,6 +7,7 @@
         "build": "run-p type-check build-only",
         "preview": "vite preview",
         "test:unit": "vitest --config ./vitest.config.ts",
+        "test:unit:update": "npm run test:unit -- -u",
         "test:e2e": "playwright test",
         "build-only": "vite build",
         "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
