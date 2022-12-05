@@ -35,6 +35,7 @@ Feedback: It was really fun to dive a little bit into vue and vue3. It's a reall
 - <https://vitest.dev/api/#tomatchsnapshot>
 - <https://www.koderhq.com/tutorial/vue/snapshot-test/>
 - <https://test-utils.vuejs.org/guide/advanced/vue-router.html#using-a-mocked-router>
+- <https://www.chakshunyu.com/blog/how-to-spy-on-a-named-import-in-jest/>
 
 # Frontend Challenge (Original README and implementation requirements)
 

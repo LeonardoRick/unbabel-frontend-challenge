@@ -23,9 +23,11 @@ const functionsMap: Record<'upload' | 'add', () => void> = {
             });
     }
 };
+
 const subscription = apiActions$.subscribe(action => {
     functionsMap[action]();
 });
+
 onUnmounted(() => {
     if (subscription && !subscription.closed) subscription.unsubscribe();
 });
