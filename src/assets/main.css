@@ -38,8 +38,3 @@ input[type='checkbox']:checked::before {
     background-color: transparent;
     cursor: pointer;
 }
-
-/* resets */
-ul {
-    padding: 0;
-}

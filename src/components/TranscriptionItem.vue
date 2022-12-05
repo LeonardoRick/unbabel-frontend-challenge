@@ -97,11 +97,12 @@ li textarea:hover {
 }
 
 li .delete-button {
-    visibility: hidden;
+    opacity: 0;
 }
 
-li:hover > .delete-button {
-    visibility: visible;
+li:hover > .delete-button,
+.delete-button:focus {
+    opacity: 1;
 }
 
 @media screen and (min-width: 1024px) {

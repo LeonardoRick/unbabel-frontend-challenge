@@ -55,7 +55,8 @@ nav {
 nav .about {
     opacity: 0;
 }
-nav .about:hover {
+nav .about:hover,
+nav .about:focus {
     opacity: 1;
 }
 
