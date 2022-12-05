@@ -24,4 +24,10 @@ describe('HomeView', () => {
         vi.spyOn(window, 'fetch').mockResolvedValue(new Response(JSON.stringify(TRANSCRIPTION_MOCK)));
         expect(postTranscriptions).toHaveBeenCalled();
     });
+
+    it('should call onUnmounted', () => {
+        const wrapper = mount(HomeViewVue, { global: { plugins: [createPinia()] } });
+        wrapper.unmount();
+        expect((wrapper.vm as any)['subscription'].closed).toEqual(true);
+    });
 });
